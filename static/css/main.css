@@ -1,0 +1,14 @@
+
+#login{
+    /*margin: 50px 500px 50px 500px;*/
+}
+.hidden{
+    visibility: hidden;
+}
+.d1-btn{
+    margin: 0 120px 0 120px;
+}
+.d2-btn{
+    visibility: hidden;
+    margin: 0 0 0 60px;
+}

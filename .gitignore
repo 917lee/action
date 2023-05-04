@@ -1,0 +1,17 @@
+**/node_modules/
+**/build/
+**/accepts/
+**/.bin/
+*.log
+/.dist/
+
+**/.jshintrc
+.idea
+*.iml
+package-lock.json
+/src/main/server.js
+/yarn.lock
+.DS_Store
+src/.DS_Store
+src/desktop/.DS_Store
+.history

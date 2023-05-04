@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+  <title>教师系统</title>
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="assets/img/favicon.png">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;1,400&display=swap">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+
+  <!-- Fontawesome CSS -->
+  <link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css">
+  <link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<!-- Main Wrapper -->
+<div class="main-wrapper">
+
+  <!-- Header -->
+  <div class="header">
+
+    <!-- Logo -->
+    <div class="header-left">
+      <a href="teacher.html" class="logo">
+        <img src="assets/img/logo.png" alt="Logo">
+      </a>
+      <a href="teacher.html" class="logo logo-small">
+        <img src="assets/img/logo-small.png" alt="Logo" width="30" height="30">
+      </a>
+    </div>
+    <!-- /Logo -->
+
+    <a href="javascript:void(0);" id="toggle_btn">
+      <i class="fas fa-align-left"></i>
+    </a>
+
+
+    <!-- Mobile Menu Toggle -->
+    <a class="mobile_btn" id="mobile_btn">
+      <i class="fas fa-bars"></i>
+    </a>
+    <!-- /Mobile Menu Toggle -->
+
+    <!-- Header Right Menu -->
+    <ul class="nav user-menu">
+
+      <!-- User Menu -->
+      <li class="nav-item dropdown has-arrow">
+        <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+          <span class="user-img"><img class="rounded-circle" src="assets/img/profiles/avatar-01.jpg" width="31" alt="Ryan Taylor"></span>
+        </a>
+        <div class="dropdown-menu">
+          <div class="user-header">
+            <div class="avatar avatar-sm">
+              <img src="assets/img/profiles/avatar-01.jpg" alt="User Image" class="avatar-img rounded-circle">
+            </div>
+            <div class="user-text">
+              <h6>李梦飞</h6>
+              <p class="text-muted mb-0">教师</p>
+            </div>
+          </div>
+          <a class="dropdown-item" href="login.html">退出登录</a>
+        </div>
+      </li>
+      <!-- /User Menu -->
+
+    </ul>
+    <!-- /Header Right Menu -->
+
+  </div>
+  <!-- /Header -->
+
+  <!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+    <div class="sidebar-inner slimscroll">
+      <div id="sidebar-menu" class="sidebar-menu">
+        <ul>
+          <li class="submenu active">
+            <a href="#"><i class="fas fa-clipboard-list"></i> <span> 考勤管理</span> <span class="menu-arrow"></span></a>
+            <ul>
+              <li><a href="face.html" class="active">开始点名</a></li>
+              <li><a href="kaoqin-info.html">考勤信息</a></li>
+              <li><a href="kaoqin.html">考勤统计</a></li>
+            </ul>
+          </li>
+          <li class="">
+            <a href="teacher-info.html"><i class="fas fa-user-graduate"></i> <span> 个人中心</span></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- /Sidebar -->
+
+  <div class="page-wrapper">
+    <div class="content container-fluid">
+
+      <!-- Page Header -->
+      <div class="page-header">
+        <div class="row align-items-center">
+          <div class="col">
+            <h3 class="page-title">考勤点名</h3>
+            <ul class="breadcrumb">
+              <li class="breadcrumb-item"><a href="teacher.html">教师</a></li>
+              <li class="breadcrumb-item active">考勤信息</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- /Page Header -->
+
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="card">
+            <div class="card-header">
+              <h5 class="card-title">我的课程</h5>
+            </div>
+            <div class="card-body">
+              <h3>人脸识别身份验证</h3>
+              <small class="form-text text-muted">【温馨提示：请保持光线充足，并正对摄像头】</small>
+              <div class="wraper" style="display: inline-block">
+                <video id="videoEl" autoplay muted></video>
+                <canvas id="canvasImg"></canvas>
+              </div>
+              <div class="operation">
+                <button type="button" class="btn btn-light d1-btn" id="try">选择</button>
+                <button type="button" class="btn btn-secondary d2-btn" id="retry">重新选择</button>
+                <button type="button" class="btn btn-info d2-btn" id="compare">开始验证</button>
+              </div>
+
+              <div class="d-alert" style="margin: 20px 0 0 0">
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="card">
+            <div class="card-header">
+              <h5 class="card-title">已到学生</h5>
+            </div>
+            <div class="card-body">
+                <ul class="list-group list1">
+
+                </ul>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+
+
+</div>
+<!-- jQuery -->
+<script src="assets/js/jquery-3.5.1.min.js"></script>
+
+<!-- Bootstrap Core JS -->
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+<!-- Slimscroll JS -->
+<script src="assets/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+<!-- Chart JS -->
+
+
+<!-- Custom JS -->
+<script  src="assets/js/script.js"></script>
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+<script src="js/http.js"></script>
+<script src="js/face.js"></script>
+
+<script>
+  const getStateInfo = () => {
+    let search = document.querySelector('#searchBtn')
+    search.addEventListener('click', (event) => {
+      let apis = new api();
+      apis.search_info().then((data) => {
+      })
+    })
+  }
+</script>
+
+<script>
+
+</script>
+</body>
+</html>
